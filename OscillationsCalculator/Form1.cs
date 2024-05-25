@@ -33,6 +33,8 @@ namespace OscillationsCalculator
             submit2.Click += new EventHandler(periodCalculation);
             submit3.Click += new EventHandler(FrequencyCalculation);
             close1.Click += new EventHandler(Close1_Click);
+            close2.Click += new EventHandler(Close1_Click);
+            close3.Click += new EventHandler(Close1_Click);
         }
 
         private void NumericTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -68,6 +70,10 @@ namespace OscillationsCalculator
                 else if (panel3.Visible)
                 {
                     panel3.Visible = false;
+                }
+                else if (panel4.Visible)
+                {
+                    panel4.Visible = false;
                 }
             }
             catch (Exception ex)
@@ -219,6 +225,11 @@ namespace OscillationsCalculator
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }

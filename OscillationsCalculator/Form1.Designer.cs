@@ -20,6 +20,22 @@
             panel1 = new Panel();
             label1 = new Label();
             comboBox2 = new ComboBox();
+            panel3 = new Panel();
+            close3 = new Button();
+            periodAns = new Label();
+            label9 = new Label();
+            submit2 = new Button();
+            freq = new TextBox();
+            label8 = new Label();
+            label6 = new Label();
+            panel4 = new Panel();
+            close2 = new Button();
+            freqAns = new Label();
+            label13 = new Label();
+            submit3 = new Button();
+            time = new TextBox();
+            label11 = new Label();
+            label10 = new Label();
             panel2 = new Panel();
             close1 = new Button();
             answer = new Label();
@@ -32,24 +48,10 @@
             label3 = new Label();
             label2 = new Label();
             force = new TextBox();
-            panel3 = new Panel();
-            periodAns = new Label();
-            label9 = new Label();
-            submit2 = new Button();
-            freq = new TextBox();
-            label8 = new Label();
-            label6 = new Label();
-            panel4 = new Panel();
-            freqAns = new Label();
-            label13 = new Label();
-            submit3 = new Button();
-            time = new TextBox();
-            label11 = new Label();
-            label10 = new Label();
             panel1.SuspendLayout();
-            panel2.SuspendLayout();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -82,143 +84,29 @@
             comboBox2.Text = "Please select the following";
             comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
-            // panel2
-            // 
-            panel2.Controls.Add(close1);
-            panel2.Controls.Add(answer);
-            panel2.Controls.Add(label7);
-            panel2.Controls.Add(submit);
-            panel2.Controls.Add(displacement);
-            panel2.Controls.Add(label5);
-            panel2.Controls.Add(springconstant);
-            panel2.Controls.Add(label4);
-            panel2.Controls.Add(label3);
-            panel2.Controls.Add(label2);
-            panel2.Controls.Add(force);
-            panel2.Location = new Point(2, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(804, 426);
-            panel2.TabIndex = 4;
-            panel2.Paint += panel2_Paint;
-            // 
-            // close1
-            // 
-            close1.Location = new Point(719, 9);
-            close1.Name = "close1";
-            close1.Size = new Size(75, 23);
-            close1.TabIndex = 11;
-            close1.Text = "x";
-            close1.UseVisualStyleBackColor = true;
-            close1.Click += close1_Click;
-            // 
-            // answer
-            // 
-            answer.AutoSize = true;
-            answer.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            answer.Location = new Point(312, 323);
-            answer.Name = "answer";
-            answer.Size = new Size(19, 21);
-            answer.TabIndex = 10;
-            answer.Text = "0";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(250, 323);
-            label7.Name = "label7";
-            label7.Size = new Size(56, 21);
-            label7.TabIndex = 9;
-            label7.Text = "Result:";
-            // 
-            // submit
-            // 
-            submit.Location = new Point(318, 269);
-            submit.Name = "submit";
-            submit.Size = new Size(93, 32);
-            submit.TabIndex = 8;
-            submit.Text = "Submit";
-            submit.UseVisualStyleBackColor = true;
-            // 
-            // displacement
-            // 
-            displacement.BorderStyle = BorderStyle.FixedSingle;
-            displacement.Location = new Point(318, 222);
-            displacement.Name = "displacement";
-            displacement.Size = new Size(194, 23);
-            displacement.TabIndex = 6;
-            displacement.TextChanged += displacement_TextChanged;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(194, 224);
-            label5.Name = "label5";
-            label5.Size = new Size(107, 21);
-            label5.TabIndex = 5;
-            label5.Text = "Displacement:";
-            label5.Click += label5_Click;
-            // 
-            // springconstant
-            // 
-            springconstant.BorderStyle = BorderStyle.FixedSingle;
-            springconstant.Location = new Point(318, 180);
-            springconstant.Name = "springconstant";
-            springconstant.Size = new Size(194, 23);
-            springconstant.TabIndex = 4;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(176, 182);
-            label4.Name = "label4";
-            label4.Size = new Size(125, 21);
-            label4.TabIndex = 3;
-            label4.Text = "Spring Constant:";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(250, 138);
-            label3.Name = "label3";
-            label3.Size = new Size(51, 21);
-            label3.TabIndex = 2;
-            label3.Text = "Force:";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(131, 27);
-            label2.Name = "label2";
-            label2.Size = new Size(563, 47);
-            label2.TabIndex = 1;
-            label2.Text = "SIMPLE HARMONIC OSCILLATIONS";
-            // 
-            // force
-            // 
-            force.BorderStyle = BorderStyle.FixedSingle;
-            force.Location = new Point(318, 136);
-            force.Name = "force";
-            force.Size = new Size(194, 23);
-            force.TabIndex = 0;
-            // 
             // panel3
             // 
-            panel3.Controls.Add(panel2);
+            panel3.Controls.Add(close3);
             panel3.Controls.Add(periodAns);
             panel3.Controls.Add(label9);
             panel3.Controls.Add(submit2);
             panel3.Controls.Add(freq);
             panel3.Controls.Add(label8);
             panel3.Controls.Add(label6);
-            panel3.Location = new Point(0, 0);
+            panel3.Location = new Point(-1, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(806, 426);
+            panel3.Size = new Size(807, 426);
             panel3.TabIndex = 11;
+            // 
+            // close3
+            // 
+            close3.Location = new Point(719, 12);
+            close3.Name = "close3";
+            close3.Size = new Size(75, 23);
+            close3.TabIndex = 12;
+            close3.Text = "x";
+            close3.UseVisualStyleBackColor = true;
+            close3.Click += button1_Click;
             // 
             // periodAns
             // 
@@ -279,6 +167,7 @@
             // 
             // panel4
             // 
+            panel4.Controls.Add(close2);
             panel4.Controls.Add(freqAns);
             panel4.Controls.Add(label13);
             panel4.Controls.Add(submit3);
@@ -289,6 +178,15 @@
             panel4.Name = "panel4";
             panel4.Size = new Size(807, 426);
             panel4.TabIndex = 12;
+            // 
+            // close2
+            // 
+            close2.Location = new Point(722, 9);
+            close2.Name = "close2";
+            close2.Size = new Size(75, 23);
+            close2.TabIndex = 13;
+            close2.Text = "x";
+            close2.UseVisualStyleBackColor = true;
             // 
             // freqAns
             // 
@@ -351,12 +249,133 @@
             label10.Text = "FREQUENCY";
             label10.Click += label10_Click;
             // 
+            // panel2
+            // 
+            panel2.Controls.Add(close1);
+            panel2.Controls.Add(answer);
+            panel2.Controls.Add(label7);
+            panel2.Controls.Add(submit);
+            panel2.Controls.Add(displacement);
+            panel2.Controls.Add(label5);
+            panel2.Controls.Add(springconstant);
+            panel2.Controls.Add(label4);
+            panel2.Controls.Add(label3);
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(force);
+            panel2.Location = new Point(-1, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(807, 426);
+            panel2.TabIndex = 13;
+            // 
+            // close1
+            // 
+            close1.Location = new Point(719, 9);
+            close1.Name = "close1";
+            close1.Size = new Size(75, 23);
+            close1.TabIndex = 11;
+            close1.Text = "x";
+            close1.UseVisualStyleBackColor = true;
+            // 
+            // answer
+            // 
+            answer.AutoSize = true;
+            answer.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            answer.Location = new Point(312, 323);
+            answer.Name = "answer";
+            answer.Size = new Size(19, 21);
+            answer.TabIndex = 10;
+            answer.Text = "0";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(250, 323);
+            label7.Name = "label7";
+            label7.Size = new Size(56, 21);
+            label7.TabIndex = 9;
+            label7.Text = "Result:";
+            // 
+            // submit
+            // 
+            submit.Location = new Point(318, 269);
+            submit.Name = "submit";
+            submit.Size = new Size(93, 32);
+            submit.TabIndex = 8;
+            submit.Text = "Submit";
+            submit.UseVisualStyleBackColor = true;
+            // 
+            // displacement
+            // 
+            displacement.BorderStyle = BorderStyle.FixedSingle;
+            displacement.Location = new Point(318, 222);
+            displacement.Name = "displacement";
+            displacement.Size = new Size(194, 23);
+            displacement.TabIndex = 6;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(194, 224);
+            label5.Name = "label5";
+            label5.Size = new Size(107, 21);
+            label5.TabIndex = 5;
+            label5.Text = "Displacement:";
+            // 
+            // springconstant
+            // 
+            springconstant.BorderStyle = BorderStyle.FixedSingle;
+            springconstant.Location = new Point(318, 180);
+            springconstant.Name = "springconstant";
+            springconstant.Size = new Size(194, 23);
+            springconstant.TabIndex = 4;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(176, 182);
+            label4.Name = "label4";
+            label4.Size = new Size(125, 21);
+            label4.TabIndex = 3;
+            label4.Text = "Spring Constant:";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(250, 138);
+            label3.Name = "label3";
+            label3.Size = new Size(51, 21);
+            label3.TabIndex = 2;
+            label3.Text = "Force:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(131, 27);
+            label2.Name = "label2";
+            label2.Size = new Size(563, 47);
+            label2.TabIndex = 1;
+            label2.Text = "SIMPLE HARMONIC OSCILLATIONS";
+            // 
+            // force
+            // 
+            force.BorderStyle = BorderStyle.FixedSingle;
+            force.Location = new Point(318, 136);
+            force.Name = "force";
+            force.Size = new Size(194, 23);
+            force.TabIndex = 0;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(805, 427);
+            Controls.Add(panel2);
             Controls.Add(panel4);
             Controls.Add(panel3);
             Controls.Add(comboBox2);
@@ -365,12 +384,12 @@
             Text = "Oscillations";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -379,17 +398,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox force;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox springconstant;
-        private System.Windows.Forms.TextBox displacement;
-        private System.Windows.Forms.Button submit;
-        private System.Windows.Forms.Label answer;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label6;
         private Button submit2;
@@ -397,7 +405,6 @@
         private Label label8;
         private Label periodAns;
         private Label label9;
-        private Button close1;
         private Panel panel4;
         private Label label10;
         private TextBox time;
@@ -405,5 +412,19 @@
         private Button submit3;
         private Label freqAns;
         private Label label13;
+        private Button close2;
+        private Panel panel2;
+        private Button close1;
+        private Label answer;
+        private Label label7;
+        private Button submit;
+        private TextBox displacement;
+        private Label label5;
+        private TextBox springconstant;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private TextBox force;
+        private Button close3;
     }
 }
