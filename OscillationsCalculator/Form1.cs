@@ -2,6 +2,7 @@ namespace OscillationsCalculator
 {
     using System;
     using System.Windows.Forms;
+    using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
     public partial class Form1 : Form
     {
@@ -26,7 +27,12 @@ namespace OscillationsCalculator
             force.KeyPress += new KeyPressEventHandler(NumericTextBox_KeyPress);
             springconstant.KeyPress += new KeyPressEventHandler(NumericTextBox_KeyPress);
             displacement.KeyPress += new KeyPressEventHandler(NumericTextBox_KeyPress);
-            submit.Click += new EventHandler(buttonCalculate_Click);
+            freq.KeyPress += new KeyPressEventHandler(NumericTextBox_KeyPress);
+            time.KeyPress += new KeyPressEventHandler(NumericTextBox_KeyPress);
+            submit.Click += new EventHandler(simpleHarmonic);
+            submit2.Click += new EventHandler(periodCalculation);
+            submit3.Click += new EventHandler(FrequencyCalculation);
+            close1.Click += new EventHandler(Close1_Click);
         }
 
         private void NumericTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -50,16 +56,41 @@ namespace OscillationsCalculator
             }
         }
 
+        private void Close1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Close the currently visible panel
+                if (panel2.Visible)
+                {
+                    panel2.Visible = false;
+                }
+                else if (panel3.Visible)
+                {
+                    panel3.Visible = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Log or display the exception
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void InitializePanels()
         {
-            // Initially hide all panels
             panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Hide all panels first
             panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
 
             // Show the selected panel
             string selectedItem = comboBox2.SelectedItem.ToString();
@@ -68,10 +99,16 @@ namespace OscillationsCalculator
                 case "Simple Harmonic Oscillations":
                     panel2.Visible = true;
                     break;
+                case "Period":
+                    panel3.Visible = true;
+                    break;
+                case "Frequency":
+                    panel4.Visible = true;
+                    break;
             }
         }
 
-        private void buttonCalculate_Click(object sender, EventArgs e)
+        private void simpleHarmonic(object sender, EventArgs e)
         {
             double forceValue, springConstant, displacementValue;
 
@@ -103,6 +140,39 @@ namespace OscillationsCalculator
             }
         }
 
+        private void periodCalculation(object sender, EventArgs e)
+        {
+            double frequency, period;
+            bool isFrequencyValid = double.TryParse(freq.Text, out frequency);
+
+            if (isFrequencyValid && frequency != 0)
+            {
+                period = 1 / frequency;
+                periodAns.Text = $"Period = {Math.Round(period, 2)} s";
+            }
+            else
+            {
+                periodAns.Text = "Please enter a valid non-zero frequency.";
+            }
+        }
+
+        private void FrequencyCalculation(object sender, EventArgs e)
+        {
+            double frequency, period;
+            bool isPeriodValid = double.TryParse(time.Text, out period);
+
+            if (isPeriodValid && period != 0)
+            {
+                frequency = 1 / period;
+                freqAns.Text = $"Frequency = {Math.Round(frequency, 2)} hz";
+            }
+            else
+            {
+                periodAns.Text = "Please enter a valid non-zero frequency.";
+            }
+        }
+
+
         private void label6_Click(object sender, EventArgs e)
         {
 
@@ -114,6 +184,41 @@ namespace OscillationsCalculator
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label6_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void close1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

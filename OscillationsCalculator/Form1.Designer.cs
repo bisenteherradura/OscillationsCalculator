@@ -2,15 +2,8 @@
 {
     partial class Form1
     {
-        /// <summary>
-        ///  Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        ///  Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,17 +15,13 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             panel1 = new Panel();
             label1 = new Label();
-            listBox1 = new ListBox();
             comboBox2 = new ComboBox();
             panel2 = new Panel();
+            close1 = new Button();
             answer = new Label();
             label7 = new Label();
             submit = new Button();
@@ -43,8 +32,24 @@
             label3 = new Label();
             label2 = new Label();
             force = new TextBox();
+            panel3 = new Panel();
+            periodAns = new Label();
+            label9 = new Label();
+            submit2 = new Button();
+            freq = new TextBox();
+            label8 = new Label();
+            label6 = new Label();
+            panel4 = new Panel();
+            freqAns = new Label();
+            label13 = new Label();
+            submit3 = new Button();
+            time = new TextBox();
+            label11 = new Label();
+            label10 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            panel3.SuspendLayout();
+            panel4.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -53,7 +58,7 @@
             panel1.Controls.Add(label1);
             panel1.Location = new Point(-1, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(781, 83);
+            panel1.Size = new Size(807, 83);
             panel1.TabIndex = 0;
             // 
             // label1
@@ -65,15 +70,6 @@
             label1.Size = new Size(250, 65);
             label1.TabIndex = 0;
             label1.Text = "WELCOME";
-            // 
-            // listBox1
-            // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(249, 180);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(0, 4);
-            listBox1.TabIndex = 1;
             // 
             // comboBox2
             // 
@@ -88,6 +84,7 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(close1);
             panel2.Controls.Add(answer);
             panel2.Controls.Add(label7);
             panel2.Controls.Add(submit);
@@ -98,10 +95,21 @@
             panel2.Controls.Add(label3);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(force);
-            panel2.Location = new Point(-1, 0);
+            panel2.Location = new Point(2, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(781, 435);
+            panel2.Size = new Size(804, 426);
             panel2.TabIndex = 4;
+            panel2.Paint += panel2_Paint;
+            // 
+            // close1
+            // 
+            close1.Location = new Point(719, 9);
+            close1.Name = "close1";
+            close1.Size = new Size(75, 23);
+            close1.TabIndex = 11;
+            close1.Text = "x";
+            close1.UseVisualStyleBackColor = true;
+            close1.Click += close1_Click;
             // 
             // answer
             // 
@@ -129,7 +137,7 @@
             submit.Name = "submit";
             submit.Size = new Size(93, 32);
             submit.TabIndex = 8;
-            submit.Text = "Submit\r\n";
+            submit.Text = "Submit";
             submit.UseVisualStyleBackColor = true;
             // 
             // displacement
@@ -198,15 +206,160 @@
             force.Size = new Size(194, 23);
             force.TabIndex = 0;
             // 
+            // panel3
+            // 
+            panel3.Controls.Add(panel2);
+            panel3.Controls.Add(periodAns);
+            panel3.Controls.Add(label9);
+            panel3.Controls.Add(submit2);
+            panel3.Controls.Add(freq);
+            panel3.Controls.Add(label8);
+            panel3.Controls.Add(label6);
+            panel3.Location = new Point(0, 0);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(806, 426);
+            panel3.TabIndex = 11;
+            // 
+            // periodAns
+            // 
+            periodAns.AutoSize = true;
+            periodAns.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            periodAns.Location = new Point(403, 323);
+            periodAns.Name = "periodAns";
+            periodAns.Size = new Size(19, 21);
+            periodAns.TabIndex = 11;
+            periodAns.Text = "0";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.Location = new Point(341, 323);
+            label9.Name = "label9";
+            label9.Size = new Size(56, 21);
+            label9.TabIndex = 10;
+            label9.Text = "Result:";
+            // 
+            // submit2
+            // 
+            submit2.Location = new Point(361, 224);
+            submit2.Name = "submit2";
+            submit2.Size = new Size(93, 32);
+            submit2.TabIndex = 3;
+            submit2.Text = "Submit";
+            submit2.UseVisualStyleBackColor = true;
+            // 
+            // freq
+            // 
+            freq.Location = new Point(361, 164);
+            freq.Name = "freq";
+            freq.Size = new Size(128, 23);
+            freq.TabIndex = 2;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.Location = new Point(270, 164);
+            label8.Name = "label8";
+            label8.Size = new Size(85, 21);
+            label8.TabIndex = 1;
+            label8.Text = "Frequency:";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(317, 27);
+            label6.Name = "label6";
+            label6.Size = new Size(139, 47);
+            label6.TabIndex = 0;
+            label6.Text = "PERIOD";
+            label6.Click += label6_Click_2;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(freqAns);
+            panel4.Controls.Add(label13);
+            panel4.Controls.Add(submit3);
+            panel4.Controls.Add(time);
+            panel4.Controls.Add(label11);
+            panel4.Controls.Add(label10);
+            panel4.Location = new Point(-1, 0);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(807, 426);
+            panel4.TabIndex = 12;
+            // 
+            // freqAns
+            // 
+            freqAns.AutoSize = true;
+            freqAns.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            freqAns.Location = new Point(333, 269);
+            freqAns.Name = "freqAns";
+            freqAns.Size = new Size(19, 21);
+            freqAns.TabIndex = 12;
+            freqAns.Text = "0";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label13.Location = new Point(271, 269);
+            label13.Name = "label13";
+            label13.Size = new Size(56, 21);
+            label13.TabIndex = 11;
+            label13.Text = "Result:";
+            // 
+            // submit3
+            // 
+            submit3.BackColor = SystemColors.ActiveCaption;
+            submit3.Cursor = Cursors.Hand;
+            submit3.FlatStyle = FlatStyle.Popup;
+            submit3.Location = new Point(326, 193);
+            submit3.Name = "submit3";
+            submit3.Size = new Size(93, 32);
+            submit3.TabIndex = 3;
+            submit3.Text = "Submit";
+            submit3.UseVisualStyleBackColor = false;
+            // 
+            // time
+            // 
+            time.Location = new Point(326, 139);
+            time.Name = "time";
+            time.Size = new Size(139, 23);
+            time.TabIndex = 2;
+            time.TextChanged += textBox1_TextChanged;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label11.Location = new Point(273, 141);
+            label11.Name = "label11";
+            label11.Size = new Size(47, 21);
+            label11.TabIndex = 1;
+            label11.Text = "Time:";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label10.Location = new Point(304, 27);
+            label10.Name = "label10";
+            label10.Size = new Size(211, 47);
+            label10.TabIndex = 0;
+            label10.Text = "FREQUENCY";
+            label10.Click += label10_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImageLayout = ImageLayout.None;
-            ClientSize = new Size(779, 431);
-            Controls.Add(panel2);
+            ClientSize = new Size(805, 427);
+            Controls.Add(panel4);
+            Controls.Add(panel3);
             Controls.Add(comboBox2);
-            Controls.Add(listBox1);
             Controls.Add(panel1);
             Name = "Form1";
             Text = "Oscillations";
@@ -214,25 +367,43 @@
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel1;
-        private Label label1;
-        private ListBox listBox1;
-        private ComboBox comboBox2;
-        private Panel panel2;
-        private TextBox force;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private TextBox springconstant;
-        private TextBox displacement;
-        private Button submit;
-        private Label answer;
-        private Label label7;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox force;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox springconstant;
+        private System.Windows.Forms.TextBox displacement;
+        private System.Windows.Forms.Button submit;
+        private System.Windows.Forms.Label answer;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label6;
+        private Button submit2;
+        private TextBox freq;
+        private Label label8;
+        private Label periodAns;
+        private Label label9;
+        private Button close1;
+        private Panel panel4;
+        private Label label10;
+        private TextBox time;
+        private Label label11;
+        private Button submit3;
+        private Label freqAns;
+        private Label label13;
     }
 }
