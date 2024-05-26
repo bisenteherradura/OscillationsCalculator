@@ -29,12 +29,17 @@ namespace OscillationsCalculator
             displacement.KeyPress += new KeyPressEventHandler(NumericTextBox_KeyPress);
             freq.KeyPress += new KeyPressEventHandler(NumericTextBox_KeyPress);
             time.KeyPress += new KeyPressEventHandler(NumericTextBox_KeyPress);
+            energy.KeyPress += new KeyPressEventHandler(NumericTextBox_KeyPress);
+            springconst.KeyPress += new KeyPressEventHandler(NumericTextBox_KeyPress);
+            amp.KeyPress += new KeyPressEventHandler(NumericTextBox_KeyPress);
             submit.Click += new EventHandler(simpleHarmonic);
             submit2.Click += new EventHandler(periodCalculation);
             submit3.Click += new EventHandler(FrequencyCalculation);
+            submit4.Click += new EventHandler(AmplitudeCalculation);
             close1.Click += new EventHandler(Close1_Click);
             close2.Click += new EventHandler(Close1_Click);
             close3.Click += new EventHandler(Close1_Click);
+            close4.Click += new EventHandler(Close1_Click);
         }
 
         private void NumericTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -75,6 +80,10 @@ namespace OscillationsCalculator
                 {
                     panel4.Visible = false;
                 }
+                else if (panel5.Visible)
+                {
+                    panel5.Visible = false;
+                }
             }
             catch (Exception ex)
             {
@@ -88,6 +97,7 @@ namespace OscillationsCalculator
             panel2.Visible = false;
             panel3.Visible = false;
             panel4.Visible = false;
+            panel5.Visible = false;
 
         }
 
@@ -97,6 +107,7 @@ namespace OscillationsCalculator
             panel2.Visible = false;
             panel3.Visible = false;
             panel4.Visible = false;
+            panel5.Visible = false;
 
             // Show the selected panel
             string selectedItem = comboBox2.SelectedItem.ToString();
@@ -110,6 +121,9 @@ namespace OscillationsCalculator
                     break;
                 case "Frequency":
                     panel4.Visible = true;
+                    break;
+                case "Amplitude":
+                    panel5.Visible = true;
                     break;
             }
         }
@@ -177,6 +191,32 @@ namespace OscillationsCalculator
                 periodAns.Text = "Please enter a valid non-zero frequency.";
             }
         }
+        private void AmplitudeCalculation(object sender, EventArgs e)
+        {
+            double springConstant, mechEnergy, amplitude;
+            bool isSpringConstValid = double.TryParse(springconst.Text, out springConstant);
+            bool isMechEnergyValid = double.TryParse(energy.Text, out mechEnergy);
+            bool isAmpliValid = double.TryParse(amp.Text, out amplitude);
+
+            if(isSpringConstValid && isAmpliValid && !isMechEnergyValid)
+            {
+                mechEnergy = 0.5 * springConstant * Math.Pow(amplitude, 2);
+
+                ampAns.Text = $"Total Mechanical Energy = {Math.Round(mechEnergy, 2)} J";
+            }
+            else if (isMechEnergyValid && isAmpliValid && !isSpringConstValid)
+            {
+                springConstant = (2 * mechEnergy) / Math.Pow(amplitude, 2);
+
+                ampAns.Text = $"Spring Constant = {Math.Round(springConstant, 2)} N/m";
+            }
+            else if (isMechEnergyValid && isSpringConstValid && !isAmpliValid)
+            {
+                amplitude = Math.Sqrt((2 * mechEnergy) / springConstant);
+
+                ampAns.Text = $"Amplitude = {Math.Round(amplitude, 2)} m";
+            }
+        }
 
 
         private void label6_Click(object sender, EventArgs e)
@@ -230,6 +270,36 @@ namespace OscillationsCalculator
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_3(object sender, EventArgs e)
         {
 
         }
