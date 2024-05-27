@@ -1,6 +1,7 @@
 namespace OscillationsCalculator
 {
     using System;
+    using System.Net.Security;
     using System.Windows.Forms;
     using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
@@ -215,6 +216,10 @@ namespace OscillationsCalculator
                 amplitude = Math.Sqrt((2 * mechEnergy) / springConstant);
 
                 ampAns.Text = $"Amplitude = {Math.Round(amplitude, 2)} m";
+            }
+            else
+            {
+                ampAns.Text = "Please enter exactly two values.";
             }
         }
 

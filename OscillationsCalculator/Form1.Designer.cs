@@ -17,10 +17,12 @@
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
             label1 = new Label();
             comboBox2 = new ComboBox();
             panel3 = new Panel();
+            submit2 = new Button();
             close3 = new Button();
             periodAns = new Label();
             label9 = new Label();
@@ -28,6 +30,7 @@
             label8 = new Label();
             label6 = new Label();
             panel4 = new Panel();
+            submit3 = new Button();
             close2 = new Button();
             freqAns = new Label();
             label13 = new Label();
@@ -59,8 +62,6 @@
             close4 = new Button();
             label14 = new Label();
             label12 = new Label();
-            submit3 = new Button();
-            submit2 = new Button();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
@@ -111,6 +112,21 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(807, 426);
             panel3.TabIndex = 11;
+            // 
+            // submit2
+            // 
+            submit2.BackColor = SystemColors.Highlight;
+            submit2.Cursor = Cursors.Hand;
+            submit2.FlatAppearance.BorderSize = 0;
+            submit2.FlatStyle = FlatStyle.Flat;
+            submit2.Font = new Font("Franklin Gothic Demi", 12F);
+            submit2.ForeColor = SystemColors.ButtonFace;
+            submit2.Location = new Point(360, 220);
+            submit2.Name = "submit2";
+            submit2.Size = new Size(141, 31);
+            submit2.TabIndex = 22;
+            submit2.Text = "Submit";
+            submit2.UseVisualStyleBackColor = false;
             // 
             // close3
             // 
@@ -193,6 +209,21 @@
             panel4.Name = "panel4";
             panel4.Size = new Size(807, 426);
             panel4.TabIndex = 12;
+            // 
+            // submit3
+            // 
+            submit3.BackColor = SystemColors.Highlight;
+            submit3.Cursor = Cursors.Hand;
+            submit3.FlatAppearance.BorderSize = 0;
+            submit3.FlatStyle = FlatStyle.Flat;
+            submit3.Font = new Font("Franklin Gothic Demi", 12F);
+            submit3.ForeColor = SystemColors.ButtonFace;
+            submit3.Location = new Point(326, 198);
+            submit3.Name = "submit3";
+            submit3.Size = new Size(139, 31);
+            submit3.TabIndex = 22;
+            submit3.Text = "Submit";
+            submit3.UseVisualStyleBackColor = false;
             // 
             // close2
             // 
@@ -439,7 +470,7 @@
             // 
             ampAns.AutoSize = true;
             ampAns.Font = new Font("Franklin Gothic Demi", 12F);
-            ampAns.Location = new Point(332, 324);
+            ampAns.Location = new Point(332, 333);
             ampAns.Name = "ampAns";
             ampAns.Size = new Size(19, 21);
             ampAns.TabIndex = 20;
@@ -449,7 +480,7 @@
             // 
             label19.AutoSize = true;
             label19.Font = new Font("Franklin Gothic Demi", 12F);
-            label19.Location = new Point(270, 324);
+            label19.Location = new Point(270, 333);
             label19.Name = "label19";
             label19.Size = new Size(61, 21);
             label19.TabIndex = 19;
@@ -555,36 +586,6 @@
             label12.Text = "A calculator that calculates different parts of Oscillations.";
             label12.Click += label12_Click;
             // 
-            // submit3
-            // 
-            submit3.BackColor = SystemColors.Highlight;
-            submit3.Cursor = Cursors.Hand;
-            submit3.FlatAppearance.BorderSize = 0;
-            submit3.FlatStyle = FlatStyle.Flat;
-            submit3.Font = new Font("Franklin Gothic Demi", 12F);
-            submit3.ForeColor = SystemColors.ButtonFace;
-            submit3.Location = new Point(326, 198);
-            submit3.Name = "submit3";
-            submit3.Size = new Size(139, 31);
-            submit3.TabIndex = 22;
-            submit3.Text = "Submit";
-            submit3.UseVisualStyleBackColor = false;
-            // 
-            // submit2
-            // 
-            submit2.BackColor = SystemColors.Highlight;
-            submit2.Cursor = Cursors.Hand;
-            submit2.FlatAppearance.BorderSize = 0;
-            submit2.FlatStyle = FlatStyle.Flat;
-            submit2.Font = new Font("Franklin Gothic Demi", 12F);
-            submit2.ForeColor = SystemColors.ButtonFace;
-            submit2.Location = new Point(360, 220);
-            submit2.Name = "submit2";
-            submit2.Size = new Size(141, 31);
-            submit2.TabIndex = 22;
-            submit2.Text = "Submit";
-            submit2.UseVisualStyleBackColor = false;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -598,6 +599,8 @@
             Controls.Add(comboBox2);
             Controls.Add(panel1);
             Controls.Add(label12);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "Form1";
             Text = "Oscillations";
             panel1.ResumeLayout(false);
